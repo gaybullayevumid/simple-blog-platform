@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <meta name="description" content="simple-blog-platform">
+    <meta name="author" content="umidgabullayev">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
 </head>
 <body>
+    <div>
+        {% include "layouts/header.html" %}
+    </div>
     {% block content %}{% endblock content %}
 </body>
 </html>
