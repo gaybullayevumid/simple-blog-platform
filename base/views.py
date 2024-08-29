@@ -8,3 +8,7 @@ def getPosts(request):
     posts = Post.objects.all()
     context = {'posts': posts}
     return render(request=request, template_name=template_name, context=context)
+
+# def post_detail(request, pk):
+#     template_name = 'pages/blog_detail.html'
+#     return render(request=request, template_name=template_name)
