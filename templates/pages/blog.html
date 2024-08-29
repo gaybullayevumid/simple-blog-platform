@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in posts %}
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    {% endif %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+{% endfor %}
+
+{% endblock content %}
