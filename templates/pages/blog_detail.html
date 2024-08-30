@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+        {% include "layouts/sidebar.html" %}
+    
+    <div class="detail">
+        {% if post.image %}
+            <img class="blog-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+        {% endif %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.body}}</p>
+    </div>
+</div>
+
+{% endblock content %}

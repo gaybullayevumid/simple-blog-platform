@@ -9,6 +9,8 @@ def getPosts(request):
     context = {'posts': posts}
     return render(request=request, template_name=template_name, context=context)
 
-# def post_detail(request, pk):
-#     template_name = 'pages/blog_detail.html'
-#     return render(request=request, template_name=template_name)
+def post_detail(request, pk):
+    template_name = 'pages/blog_detail.html'
+    post = Post.objects.get(pk=pk)
+    context = {'post': post}
+    return render(request=request, template_name=template_name, context=context)
