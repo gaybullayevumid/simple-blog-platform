@@ -18,15 +18,24 @@ body {
 .container {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
   background: var(--bg-color);
-  /* position: relative; */
 }
 
 .container .sidebar {
   width: 20%;
   height: 100vh;
-  border: 1px solid red;
+  padding: 70px 20px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+.container .sidebar h3{
+    margin-top: 20px;
+}
+
+.container .sidebar a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .container .cards {
