@@ -9,8 +9,8 @@
             {% if post.image %}
                 <img class="blog-image" src="{{ post.image.url }}" alt="{{ post.title }}">
             {% endif %}
-            <h1>{{post.title}}</h1>
-            <p>{{post.body}}</p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p>{{post.body | truncatechars:130}}</p>
             <p><a href="">Read More</a></p>
         </div>
         {% endfor %}
