@@ -12,5 +12,9 @@ def getPosts(request):
 def post_detail(request, pk):
     template_name = 'pages/blog_detail.html'
     post = Post.objects.get(pk=pk)
-    context = {'post': post}
+    last_posts = Post.objects.order_by('-created_on')
+    context = {
+                'post': post,
+                'last_posts':last_posts
+               }
     return render(request=request, template_name=template_name, context=context)

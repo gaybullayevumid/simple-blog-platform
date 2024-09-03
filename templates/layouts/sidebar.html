@@ -1,8 +1,8 @@
 <div class="sidebar">
         <h2>Last Posts</h2>
-        {% for post in posts %}
-        <h3><a href="{% url 'posts_detail' post.pk %}">{{post.title | truncatechars:20 }}</a></h3>
-        <p>{{post.body | truncatechars:30}}</p>
+        {% for l_post in last_posts %}
+        <h3><a href="{% url 'posts_detail' l_post.pk %}">{{l_post.title | truncatechars:20 }}</a></h3>
+        <p>{{l_post.body | truncatechars:30}}</p>
         <hr>
         {% endfor %}
 </div>
